@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Roamer</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,60 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Welcome to Roamer</h1>
+      <h2>Where we enjoy our adventures with our pets alongside us!</h2>
+
+      <section id="before-sign-in">
+        <!-- SIGN UP Form -->
+        <form id="sign-up" class="border">
+          <fieldset>
+            <legend>Sign Up</legend>
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+            <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+            <input type="name" name="credentials[name]" placeholder="Name" required>
+            <input type="address" name="credentials[address]" placeholder="Address" required>
+
+            <button class="btn btn-primary">Sign Up</button>
+
+          </fieldset>
+        </form>
+        <hr>
+        <!-- SIGN IN Form -->
+        <form id="sign-in" class="border">
+          <fieldset>
+            <legend>Sign In</legend>
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+
+            <button class="btn btn-primary">Sign In</button>
+          </fieldset>
+        </form>
+      </section>
+      <hr>
+
+      <!-- Section to be displayed only after successfully logging in -->
+      <section id="after-sign-in">
+        <!-- CHANGE PASSWORD Form -->
+        <form id="change-password" class="border">
+          <fieldset>
+            <legend>Change Password</legend>
+            <input type="password" name="passwords[old]" placeholder="Current Password" required>
+            <input type="password" name="passwords[new]" placeholder="New Password" required>
+
+            <button class="btn btn-primary">Change Password</button>
+          </fieldset>
+        </form>
+        <hr>
+
+        <!-- SIGN OUT -->
+        <button id="sign-out" class="btn btn-danger">Sign Out</button>
+      </section>
+
+      <!-- USER FEEDBACK Section -->
+      <section>
+        <div id="error-message"></div>
+        <div id="posts-display"></div>
+      </section>
     </body>
 </html>
