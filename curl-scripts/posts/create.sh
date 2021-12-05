@@ -7,10 +7,10 @@ curl "${API}${URL_PATH}" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
-  --header "Authorization: Bearer ${TOKEN}" \
+  --header "Authorization: Bearer " \
   --data '{
     "post": {
-      "name": "'"${NAME}"'",
+      "Title": "'"${TITLE}"'",
       "location": "'"${LOCATION}"'",
       "content": "'"${CONTENT}"'",
       "rating": "'"${RATING}"'"

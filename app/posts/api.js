@@ -1,6 +1,8 @@
 // Requiring the config file to gain access to our API URL
 const config = require('../config')
 
+const store = require('../store')
+
 // POSTS CRUD Functions
 
 // INDEX
@@ -8,8 +10,11 @@ const config = require('../config')
 const index = function () {
     return $.ajax({
         method: 'GET',
-        url: config.apiUrl + '/posts'
-    })
+        url: config.apiUrl + '/posts',
+        headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
 }
 
 // SHOW
@@ -17,8 +22,11 @@ const index = function () {
 const show = function (id) {
     return $.ajax({
         method: 'GET',
-        url: config.apiUrl + '/posts/' + id
-    })
+        url: config.apiUrl + '/posts/' + id,
+        headers: {
+        Authorization: 'Bearer ' + store.user.token
+    }
+  })
 }
 
 // DESTROY
@@ -26,8 +34,11 @@ const show = function (id) {
 const destroy = function (id) {
     return $.ajax({
         method: 'DELETE',
-        url: config.apiUrl + '/posts/' + id
-    })
+        url: config.apiUrl + '/posts/' + id,
+        headers: {
+        Authorization: 'Bearer ' + store.user.token
+    }
+  })
 }
 
 // UPDATE
@@ -35,9 +46,12 @@ const destroy = function (id) {
 const update = function (id, formData) {
     return $.ajax({
         method: 'PATCH',
-        url: config.apiUrl + '/books/' + id,
-        data: formData
-    })
+        url: config.apiUrl + '/posts/' + id,
+        data: formData,
+        headers: {
+        Authorization: 'Bearer ' + store.user.token
+    }
+  })
 }
 
 // CREATE
@@ -46,8 +60,11 @@ const create = function (formData) {
     return $.ajax({
         method: 'POST',
         url: config.apiUrl + '/posts',
-        data: formData
-    })
+        data: formData,
+        headers: {
+        Authorization: 'Bearer ' + store.user.token
+    }
+  })
 }
 
 // Exports

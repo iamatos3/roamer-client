@@ -17,16 +17,7 @@ const onIndexPostsSuccess = function (responseData) {
                 <p>Location: ${post.location}</p>
                 <p>ID: ${post._id}</p>
                 <p>Content: ${post.content}</p>
-                <p>Date: ${post.date}</p>
                 <p>Rating: ${post.rating}</p>
-                <button class="posts-destroy-dynamic" data-id=${post._id}>Destroy Post</button>
-                <form class="posts-update-dynamic" data-id=${post._id}>
-                    <input type="text" name="post[title]" placeholder="Title" required>
-                    <input type="text" name="post[location]" placeholder="Location" required>
-                    <input type="text" name="post[content]" placeholder="Content" required>
-                    <input type="text" name="post[rating]" placeholder="Rating" required>
-                    <button>Update Post</button>
-                </form>
             </div>
         `
     })
@@ -42,14 +33,13 @@ const onShowPostSuccess = function (responseData) {
     console.log(responseData)
 
     // Created the HTML to display a single book
-    const postHtml = 
+    const postHtml =
     `
     <div>
         <h4>Title: ${post.title}</h4>
-        <p>Location: ${post.location}</p>
         <p>ID: ${post._id}</p>
+        <p>Location: ${post.location}</p>
         <p>Content: ${post.content}</p>
-        <p>Date: ${post.date}</p>
         <p>Rating: ${post.rating}</p>
     </div>
     `
@@ -114,10 +104,10 @@ const onError = function (err) {
 
 // Exports
 module.exports = {
-    onIndexPostsSuccess,
-    onShowPostSuccess,
-    onDestroyPostSuccess,
-    onUpdatePostSuccess,
-    onCreatePostSuccess,
-    onError
+  onIndexPostsSuccess,
+  onShowPostSuccess,
+  onDestroyPostSuccess,
+  onUpdatePostSuccess,
+  onCreatePostSuccess,
+  onError
 }

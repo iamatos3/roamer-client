@@ -23,8 +23,6 @@
             <input type="email" name="credentials[email]" placeholder="Email" required>
             <input type="password" name="credentials[password]" placeholder="Password" required>
             <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
-            <input type="name" name="credentials[name]" placeholder="Name" required>
-            <input type="address" name="credentials[address]" placeholder="Address" required>
 
             <button class="btn btn-primary">Sign Up</button>
 
@@ -52,20 +50,71 @@
             <legend>Change Password</legend>
             <input type="password" name="passwords[old]" placeholder="Current Password" required>
             <input type="password" name="passwords[new]" placeholder="New Password" required>
-
+            
             <button class="btn btn-primary">Change Password</button>
           </fieldset>
         </form>
         <hr>
-
+        
         <!-- SIGN OUT -->
         <button id="sign-out" class="btn btn-danger">Sign Out</button>
       </section>
-
+      
       <!-- USER FEEDBACK Section -->
       <section>
         <div id="error-message"></div>
         <div id="posts-display"></div>
       </section>
+
+      <!-- POST Section -->
+      <main>
+        <h1>Adventures</h1>
+        <section>
+          <!-- INDEX -->
+          <h2>View All Adventure Posts</h2>
+          <button id="posts-index">Adventure Posts</button>
+          <hr>
+          
+          <!-- CREATE a Post -->
+          <h2>Create a New Adventure Post</h2>
+          <form id="posts-create">
+            <input type="text" name="post[title]" placeholder="Post Title" required>
+            <input type="text" name="post[location]" placeholder="Post Location" required>
+            <input type="text" name="post[content]" placeholder="Post Content" required>
+            <input type="text" name="post[rating]" placeholder="Post Rating" required>
+            <button>Create Post</button>
+          </form>
+          
+
+          <!-- SHOW a Post (individual) -->
+          <h2>View an Adventure Post</h2>
+          <form id="posts-show">
+            <input type="text" name="post[id]" placeholder="Post ID" required>
+            <button>View Post</button>
+          </form>
+          <hr>
+          
+          <!-- UPDATE a Post -->
+          <h2>Update an Adventure Post</h2>
+          <form id="posts-update"> 
+            <input type="text" name="post[id]" placeholder="Post ID" required>
+            <input type="text" name="post[title]" placeholder="Post Title" required>
+            <input type="text" name="post[location]" placeholder="Post Location" required>
+            <input type="text" name="post[content]" placeholder="Post Content" required>
+            <input type="text" name="post[rating]" placeholder="Post Rating" required>
+            <button>Update Post</button>
+          </form>
+          <hr>
+
+          <!-- DELETE Post -->
+          <h3>Delete Post</h3>
+          <form id="posts-delete">
+            <input type="text" name="post[id]" placeholder="Post ID" required>
+            <button>Delete Post</button>
+          </form>
+          <hr>
+
+        </section>
+      </main>
     </body>
 </html>
