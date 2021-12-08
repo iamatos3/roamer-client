@@ -30,7 +30,6 @@ const signInSuccess = function (responseData) {
 	// Adding the 'user' we got back from the response's data to the store object
 	// Also be able to access the user's token in api.js
 	store.user = responseData.user
-	console.log('store is', store)
 
     $('#posts-display').text('Successfully signed in!')
     
@@ -43,8 +42,6 @@ const signInSuccess = function (responseData) {
     $('#before-sign-in').hide()
     // After signing in - Show the section with the id 'after-sign-in'
     $('#after-sign-in').show()
-
-    console.log('responseData is', responseData)
 }
 
 const signInFailure = function (error) {
@@ -63,8 +60,6 @@ const changePasswordSuccess = function (responseData) {
     $('#posts-display').addClass('text-success')
 
     $('form').trigger('reset')
-
-    console.log('responseData is', responseData)
 }
 
 const changePasswordFailure = function (error) {

@@ -12,8 +12,11 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Welcome to Roamer</h1>
-      <h2>Where we enjoy our adventures with our pets alongside us!</h2>
+      <div id="intro-div">
+        <h1>Roamer🐾</h1>
+        <h3>Welcome to Roamer</h3>
+        
+      </div>
 
       <section id="before-sign-in">
         <!-- SIGN UP Form -->
@@ -28,7 +31,7 @@
 
           </fieldset>
         </form>
-        <hr>
+
         <!-- SIGN IN Form -->
         <form id="sign-in" class="border">
           <fieldset>
@@ -61,18 +64,20 @@
       </section>
       
       <!-- USER FEEDBACK Section -->
-      <section>
         <div id="error-message"></div>
+        <h3>Where we enjoy our adventures with our pets alongside us!</h3>
         <div id="posts-display"></div>
-      </section>
+
 
       <!-- POST Section -->
       <main>
         <h1>Adventures</h1>
-        <section>
+        <hr>
           <!-- INDEX -->
+          <section id="index-button">
           <h2>View All Adventure Posts</h2>
           <button id="posts-index">Adventure Posts</button>
+          </section>
           <hr>
           
           <!-- CREATE a Post -->
@@ -84,7 +89,7 @@
             <input type="text" name="post[rating]" placeholder="Post Rating" required>
             <button>Create Post</button>
           </form>
-          
+          <hr>
 
           <!-- SHOW a Post (individual) -->
           <h2>View an Adventure Post</h2>
@@ -113,8 +118,6 @@
             <button>Delete Post</button>
           </form>
           <hr>
-
-        </section>
       </main>
     </body>
 </html>

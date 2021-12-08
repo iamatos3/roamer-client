@@ -1,11 +1,104 @@
 @import '~bootstrap/scss/bootstrap';
+$primary: #71eeb8;
+$secondary: #f4c6ac;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;454;500&family=Oswald:wght@300&display=swap');
 
 .border {
-    border: 3px solid black;
     margin: 20px;
     padding: 20px;
+    display: inline-block;
+
 }
 
 #after-sign-in {
     display: none;
+    text-align: center;
+}
+
+#before-sign-in {
+    text-align: center;
+    display: flex;
+}
+
+#intro-div {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+#sign-up {
+    align-items: center;
+    text-align: center;
+}
+
+// input[type="email"] {
+//     display: block;
+//     margin: auto;
+//     align-items: center;
+// }
+
+// input[type="password"] {
+//     display: block;
+// }
+
+h1, h2, h3, h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+}
+
+h1 {
+    color: $primary;
+}
+
+h2 {
+    color: $secondary;
+}
+
+h3 {
+    color: #191970;
+}
+
+body {
+    background-image: url('https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-position: center;
+    background-size: cover;
+}
+
+.text-success {
+    text-align: center;
+}
+
+.text-danger {
+    text-align: center;
+}
+
+#posts-section {
+    align-items: center;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+}
+
+#index-button {
+    text-align: center;
+}
+
+#posts-create {
+    text-align: center;
+}
+
+#posts-show {
+    text-align: center;
+}
+
+#posts-update {
+    text-align: center;
+}
+
+#posts-delete {
+    text-align: center;
 }

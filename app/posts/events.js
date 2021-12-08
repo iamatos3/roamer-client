@@ -72,27 +72,27 @@ const onCreatePost = (event) => {
        .catch(ui.onError)
 }
 
-const onDynamicDestroyPost = (event) => {
-    const id = $(event.target).data('id')
+// const onDynamicDestroyPost = (event) => {
+//     const id = $(event.target).data('id')
 
-    api.destroy(id)
-       .then(ui.onDynamicDestroyPost)
-       .catch(ui.onError)
-}
+//     api.destroy(id)
+//        .then(ui.onDynamicDestroyPost)
+//        .catch(ui.onError)
+// }
 
-const onDynamicUpdatePost = (event) => {
-    event.preventDefault()
+// const onDynamicUpdatePost = (event) => {
+//     event.preventDefault()
 
-    const form = event.target
-    const formData = getFormFields(form)
-    console.log(formData)
+//     const form = event.target
+//     const formData = getFormFields(form)
+//     console.log(formData)
 
-    const id = $(event.target).data('id')
+//     const id = $(event.target).data('id')
 
-    api.update(id, formData)
-       .then(ui.onUpdatePostSuccess)
-       .catch(ui.onError)
-}
+//     api.update(id, formData)
+//        .then(ui.onUpdatePostSuccess)
+//        .catch(ui.onError)
+// }
 
 // Exports
 module.exports = {
@@ -100,7 +100,7 @@ module.exports = {
     onShowPost,
     onDestroyPost,
     onUpdatePost,
-    onCreatePost,
-    onDynamicDestroyPost,
-    onDynamicUpdatePost
+    onCreatePost
+//     onDynamicDestroyPost,
+//     onDynamicUpdatePost
 }

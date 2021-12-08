@@ -30,7 +30,6 @@ const onIndexPostsSuccess = function (responseData) {
 const onShowPostSuccess = function (responseData) {
     // Extracting the post object from the response's data
     const post = responseData.post
-    console.log(responseData)
 
     // Created the HTML to display a single book
     const postHtml =
@@ -67,7 +66,7 @@ const onDestroyPostSuccess = function () {
 // UPDATE
 // If ran successfully, the user will be able to update a specific post
 const onUpdatePostSuccess = function () {
-    $('#posts-display').text('Post was updated successfully, please click "View all Posts" to see your changes')
+    $('#posts-display').text('Post was updated successfully, please click "Adventure Posts" to see your changes')
     $('#posts-display').addClass('text-success')
 
     setTimeout(() => {
