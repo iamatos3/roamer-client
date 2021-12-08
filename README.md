@@ -1,4 +1,4 @@
-# Roamer (API): Where we enjoy our adventures with our pets alongside us!
+# Roamer (Client): Where we enjoy our adventures with our pets alongside us!
 
 This application allows the user to store places they've journeyed along with their pet(s). They are able to keep notes of these specific places by entering the name of the place or area, the location of it and a summary of their experience along with a rating (1-5).
 
@@ -40,3 +40,8 @@ I initially planned to make this app into a safe space where pet owners can comm
 ## Images
 
 #### Wireframes:
+![Front-End-Posts_Roamer](https://user-images.githubusercontent.com/88846920/145131666-3e10de9c-f701-4f83-b990-8e5eeab60f35.png)
+![Front-End-loggedIn_Roamer](https://user-images.githubusercontent.com/88846920/145131670-bcb5be7a-6b88-4b9d-a22e-bf708c64c9d9.png)
+![Front-End Wireframe_Roamer](https://user-images.githubusercontent.com/88846920/145131671-5cc6725b-ef8f-4d3d-92ed-66a096446cc7.png)
+
+
