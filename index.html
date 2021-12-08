@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Roamer</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div id="intro-div">
+        <h1>Roamer🐾</h1>
+        <h3>Welcome to Roamer</h3>
+        
+      </div>
+
+      <section id="before-sign-in">
+        <!-- SIGN UP Form -->
+        <form id="sign-up" class="border">
+          <fieldset>
+            <legend>Sign Up</legend>
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+            <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+
+            <button class="btn btn-primary">Sign Up</button>
+
+          </fieldset>
+        </form>
+
+        <!-- SIGN IN Form -->
+        <form id="sign-in" class="border">
+          <fieldset>
+            <legend>Sign In</legend>
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+
+            <button class="btn btn-primary">Sign In</button>
+          </fieldset>
+        </form>
+      </section>
+      <hr>
+
+      <!-- Section to be displayed only after successfully logging in -->
+      <section id="after-sign-in">
+        <!-- CHANGE PASSWORD Form -->
+        <form id="change-password" class="border">
+          <fieldset>
+            <legend>Change Password</legend>
+            <input type="password" name="passwords[old]" placeholder="Current Password" required>
+            <input type="password" name="passwords[new]" placeholder="New Password" required>
+            
+            <button class="btn btn-primary">Change Password</button>
+          </fieldset>
+        </form>
+        <hr>
+        
+        <!-- SIGN OUT -->
+        <button id="sign-out" class="btn btn-danger">Sign Out</button>
+      </section>
+      
+      <!-- USER FEEDBACK Section -->
+        <div id="error-message"></div>
+        <h3>Where we enjoy our adventures with our pets alongside us!</h3>
+        <div id="posts-display"></div>
+
+
+      <!-- POST Section -->
+      <main>
+        <h1>Adventures</h1>
+        <hr>
+          <!-- INDEX -->
+          <section id="index-button">
+          <h2>View All Adventure Posts</h2>
+          <button id="posts-index">Adventure Posts</button>
+          </section>
+          <hr>
+          
+          <!-- CREATE a Post -->
+          <h2>Create a New Adventure Post</h2>
+          <form id="posts-create">
+            <input type="text" name="post[title]" placeholder="Post Title" required>
+            <input type="text" name="post[location]" placeholder="Post Location" required>
+            <input type="text" name="post[content]" placeholder="Post Content" required>
+            <input type="text" name="post[rating]" placeholder="Post Rating" required>
+            <button>Create Post</button>
+          </form>
+          <hr>
+
+          <!-- SHOW a Post (individual) -->
+          <h2>View an Adventure Post</h2>
+          <form id="posts-show">
+            <input type="text" name="post[id]" placeholder="Post ID" required>
+            <button>View Post</button>
+          </form>
+          <hr>
+          
+          <!-- UPDATE a Post -->
+          <h2>Update an Adventure Post</h2>
+          <form id="posts-update"> 
+            <input type="text" name="post[id]" placeholder="Post ID" required>
+            <input type="text" name="post[title]" placeholder="Post Title" required>
+            <input type="text" name="post[location]" placeholder="Post Location" required>
+            <input type="text" name="post[content]" placeholder="Post Content" required>
+            <input type="text" name="post[rating]" placeholder="Post Rating" required>
+            <button>Update Post</button>
+          </form>
+          <hr>
+
+          <!-- DELETE Post -->
+          <h3>Delete Post</h3>
+          <form id="posts-delete">
+            <input type="text" name="post[id]" placeholder="Post ID" required>
+            <button>Delete Post</button>
+          </form>
+          <hr>
+      </main>
+    </body>
+</html>
